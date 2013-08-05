@@ -1,0 +1,22 @@
+{
+  "name": "mailgun-validator",
+  "version": "0.0.1",
+  "description": "Validate email address using Mailgun's APIs",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "request": "~2.25.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/evanlucas/mailgun-validator.git",
+  "keywords": [
+    "mailgun",
+    "email",
+    "validation"
+  ],
+  "author": "Evan Lucas",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
