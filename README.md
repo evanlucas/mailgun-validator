@@ -6,12 +6,16 @@
   npm install mailgun-validator
 ```
 
-# API
+## API
+
+```js
+  var mgval = require('mailgun-validator')('<PUBLIC_APIKEY>')
+```
 
   - [Validator.validate()](#toc_1)
   - [Validator.parse()](#toc_2)
 
-## Validator.validate(address:String, cb:Function)
+### Validator.validate(address:String, cb:Function)
 
   Validates the given `address 
   
@@ -31,19 +35,19 @@
   Returns:
   
 ```js
-  // => { 
-  // =>   is_valid: true, 
-  // =>   parts: { 
-  // =>     local_part: 'john.smith', 
-  // =>     domain: 'gmail.com',
-  // =>     display_name: ''
-  // =>   },
-  // =>   address: 'john.smith@gmail.com',
-  // =>   did_you_mean: null
-  // => }
+  { 
+    is_valid: true, 
+    parts: { 
+    local_part: 'john.smith', 
+    domain: 'gmail.com',
+    display_name: ''
+    },
+    address: 'john.smith@gmail.com',
+    did_you_mean: null
+  }
 ```
 
-## Validator.parse(addresses:String|Array, syntaxOnly:Boolean, cb:Function)
+### Validator.parse(addresses:String|Array, syntaxOnly:Boolean, cb:Function)
 
   Parses the given `addresses`
   
@@ -63,13 +67,13 @@
   Returns:
   
 ```js
-  // => {
-  // =>   parsed: [
-  // =>     'john@gmail.com',
-  // =>     'hello@world.com'
-  // =>   ],
-  // =>   unparseable: []
-  // => }
+   {
+     parsed: [
+       'john@gmail.com',
+       'hello@world.com'
+     ],
+     unparseable: []
+   }
 ```
 
   
@@ -89,13 +93,13 @@
   Returns:
   
 ```js
-  // => {
-  // =>   parsed: [
-  // =>     'hello@world.com'
-  // =>   ],
-  // =>   unparseable: [
-  // =>     'john@gmail.com'
-  // =>   ]
-  // => }
+   {
+     parsed: [
+       'hello@world.com'
+     ],
+     unparseable: [
+       'john@gmail.com'
+     ]
+   }
 ```
 
