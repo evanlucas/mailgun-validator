@@ -17,7 +17,7 @@
 
 ### Validator.validate(address:String, cb:Function)
 
-  Validates the given `address 
+  Validates the given `address`
   
   Examples:
   
@@ -38,9 +38,9 @@
   { 
     is_valid: true, 
     parts: { 
-    local_part: 'john.smith', 
-    domain: 'gmail.com',
-    display_name: ''
+      local_part: 'john.smith', 
+      domain: 'gmail.com',
+      display_name: ''
     },
     address: 'john.smith@gmail.com',
     did_you_mean: null
